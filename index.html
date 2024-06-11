@@ -60,19 +60,19 @@
             display: none;
             position: fixed;
             z-index: 1;
-            padding-top: 60px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90%;
+            max-height: 90%;
         }
         .close {
             position: absolute;
@@ -161,6 +161,7 @@
         const images = [
             "img/art/00329-3583901864-0000.png",
             "img/art/ComfyUI_00239_.png",
+            "img/art/ComfyUI_00247_.png",
             "img/art/ComfyUI_00393_.png",
             "img/art/ComfyUI_00608_.png",
             "img/art/ComfyUI_00624_.png",
@@ -170,10 +171,8 @@
             "img/art/ComfyUI_00698_.png",
             "img/art/ComfyUI_00705_.png",
             "img/art/ComfyUI_01530_.png",
-            "img/art/ComfyUI_00247_.png",
-            "img/art/ComfyUI_01612_.png",
+            "img/art/ComfyUI_01612_.png"
         ];
-
 
         // Load images into the gallery
         const gallery = document.getElementById('gallery');
