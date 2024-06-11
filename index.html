@@ -135,10 +135,8 @@
     </section>
     <section id="art">
         <h2>art.</h2>
-        <div class="gallery">
-            <img src="img/art/ComfyUI_00698_.png" alt="Artwork 1" onclick="openModal(this)">
-            <img src="img/art/ComfyUI_00239_.png" alt="Artwork 2" onclick="openModal(this)">
-            <img src="your_image_url_3" alt="Artwork 3" onclick="openModal(this)">
+        <div class="gallery" id="gallery">
+            <!-- Images will be loaded by JavaScript -->
         </div>
     </section>
     <section id="contact">
@@ -159,6 +157,23 @@
     </div>
 
     <script>
+        // Array of image file names
+        const images = [
+            "img/art/ComfyUI_00698_.png",
+            "your_image_url_2",
+            "your_image_url_3"
+        ];
+
+        // Load images into the gallery
+        const gallery = document.getElementById('gallery');
+        images.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = "Artwork";
+            img.onclick = () => openModal(img);
+            gallery.appendChild(img);
+        });
+
         function openModal(element) {
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("modal-img");
