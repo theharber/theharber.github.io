@@ -116,6 +116,20 @@
             height: 800px; /* Set a height that should contain all the content */
             border: 0;
         }
+        .youtube-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         .contact-info {
             list-style: none;
             padding: 0;
@@ -154,19 +168,23 @@
                 </iframe>
             </div>
             <br><br>
-            <iframe
-                src="https://www.youtube.com/embed/videoseries?si=8zfzcqAPrG5ym8wR&amp;list=OLAK5uy_lRKQrRCL5hlNn_W3OnoJV7iL1JEOoLnr8"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="youtube-container">
+                <iframe
+                    src="https://www.youtube.com/embed/videoseries?si=8zfzcqAPrG5ym8wR&amp;list=OLAK5uy_lRKQrRCL5hlNn_W3OnoJV7iL1JEOoLnr8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="video">
             <h3>videos.</h3>
-            <iframe
-                src="https://www.youtube.com/embed/videoseries?si=RYQuYgenPpd3Ax1o&amp;list=PL-0b-6fteVr86pz4Won8lpQNVG7aVRFp0"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="youtube-container">
+                <iframe
+                    src="https://www.youtube.com/embed/videoseries?si=RYQuYgenPpd3Ax1o&amp;list=PL-0b-6fteVr86pz4Won8lpQNVG7aVRFp0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
     <section id="art">
