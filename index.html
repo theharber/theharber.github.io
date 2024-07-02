@@ -105,10 +105,16 @@
             text-align: center;
             margin-bottom: 40px;
         }
-        .video iframe {
+        .iframe-container {
             width: 100%;
-            height: auto;
-            aspect-ratio: 16/9;
+            max-width: 660px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 800px; /* Set a height that should contain all the content */
+            border: 0;
         }
         .contact-info {
             list-style: none;
@@ -140,8 +146,14 @@
         <div class="video">
             <h3>official releases.</h3>
             <h1><a href="https://distrokid.com/hyperfollow/theharber/first-dates-bikes--skates-stay-up-lates"><i>check out my debut album here</i></a></h1>
-                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="800" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ca/album/first-dates-bikes-skates-stay-up-lates/1754785838"></iframe>
-                <br><br>
+            <div class="iframe-container">
+                <iframe 
+                    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+                    src="https://embed.music.apple.com/ca/album/first-dates-bikes-skates-stay-up-lates/1754785838">
+                </iframe>
+            </div>
+            <br><br>
             <iframe
                 src="https://www.youtube.com/embed/videoseries?si=8zfzcqAPrG5ym8wR&amp;list=OLAK5uy_lRKQrRCL5hlNn_W3OnoJV7iL1JEOoLnr8"
                 title="YouTube video player" frameborder="0"
